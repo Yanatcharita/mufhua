@@ -1,22 +1,24 @@
+import cv2
 from PIL import Image
-from ultralytics import YOLO
-import tempfile
-import os
+import numpy as np
 
-# โหลดโมเดล
-model = YOLO("best.pt")  
-
-def detect_muffin_or_chihuahua(image: Image.Image):
-    # บันทึกภาพชั่วคราว
-    with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as temp_file:
-        image.save(temp_file.name)
-        temp_path = temp_file.name
-
+def detect_muffin_or_chihuahua(uploaded_file):
+    # โหลดโมเดล
+    model = YOLO("best.pt")
+    
+    # บันทึกไฟล์อัปโหลดลงเครื่อง
+    file_path = f"temp_{uploaded_file.name}"
+    with open(file_path, "wb") as f:
+        f.write(uploaded_file.getbuffer())
+    
     # ทำนาย
-    results = model.predict(source=temp_path, conf=0.3, save=False)
-    result_img = results[0].plot()
-    result_pil = Image.fromarray(result_img)
-    labels = [model.names[int(cls)] for cls in results[0].boxes.cls]
+    results = model.predict(source=file_path, conf=0.3, save=False)
 
-    os.remove(temp_path)
-    return labels, result_pil
+    # ดึงภาพพร้อมกล่องผลลัพธ์
+    result_img = results[0].plot()
+
+    # แปลง BGR → RGB
+    result_img = cv2.cvtColor(result_img, cv2.COLOR_BGR2RGB)
+
+    # แปลงเป็น PIL image เพื่อให้ Streamlit แสดงได้ถูกสี
+    return Image.fromarray(result_img)
