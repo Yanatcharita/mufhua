@@ -13,7 +13,7 @@ def detect_muffin_or_chihuahua(image: Image.Image):
         temp_path = temp_file.name
 
     # ทำนาย
-    results = model.predict(source=temp_path, conf=0.3, save=False)
+    results = model.predict(source=temp_path, conf=0.5, save=False)
     result_img = results[0].plot()
     result_pil = Image.fromarray(result_img)
     labels = [model.names[int(cls)] for cls in results[0].boxes.cls]
