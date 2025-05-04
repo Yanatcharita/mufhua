@@ -3,8 +3,8 @@ from ultralytics import YOLO
 import tempfile
 import os
 
-# โหลดโมเดล (ใช้ path สั้น เช่น best.pt)
-model = YOLO("/content/runs/detect/yolov8n_muffin_chihuahua5/weights/best.pt")
+# โหลดโมเดล
+model = YOLO("best.pt")  
 
 def detect_muffin_or_chihuahua(image: Image.Image):
     # บันทึกภาพชั่วคราว
