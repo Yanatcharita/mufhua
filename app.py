@@ -17,5 +17,6 @@ if uploaded_file:
         result_labels, result_image = detect_muffin_or_chihuahua(image)
 
     st.success("เสร็จแล้ว!")
-    st.image(result_image, caption="ผลลัพธ์จากโมเดล", use_column_width=True)
+    result_image = detect_muffin_or_chihuahua(uploaded_file)
+    st.image(result_image, caption="ผลลัพธ์จากโมเดล")
     st.write("🔍 ตรวจพบ:", ", ".join(result_labels) if result_labels else "ไม่พบวัตถุ")
