@@ -1,4 +1,3 @@
-%%writefile app.py
 import streamlit as st
 from PIL import Image
 from model import detect_muffin_or_chihuahua
