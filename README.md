@@ -3,7 +3,8 @@ This project originated from my interest in applying Deep Learning to image clas
 
 ![image](https://github.com/user-attachments/assets/a8b73ef5-82ce-401b-8df5-87a04078393a)
 
-Figure 5. Chihuahua vs muffin
+Figure 1. Chihuahua vs muffin
+
 
 
 Initially, I planned to explore Convolutional Neural Networks (CNNs) to tackle this challenge. However, I wanted to make the project more enchanted and technically interesting, so I decided to upgrade it into an object detection task, where the model needs to identify and localize multiple objects in a single image using bounding boxes.
