@@ -2,6 +2,7 @@
 This project originated from my interest in applying Deep Learning to image classification, particularly in scenarios where images look deceptively similar but represent entirely different contexts — like chihuahuas and muffins.
 
 ![image](https://github.com/user-attachments/assets/a8b73ef5-82ce-401b-8df5-87a04078393a)
+
 Figure 5. Chihuahua vs muffin
 
 
