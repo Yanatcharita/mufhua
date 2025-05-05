@@ -78,7 +78,7 @@ https://mufhua-hrjlzdbjbdv8jnvyndrrhr.streamlit.app/
 
 ![Screenshot 2025-05-04 153248](https://github.com/user-attachments/assets/ac3e4845-0799-4597-8441-c554a207009c)
 
-Figure 5. Web App Detection
+Figure 5. Web App Detection Result
 
 # Possible Improvements and Future Work
 ## Add More Classes
