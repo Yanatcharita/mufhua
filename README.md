@@ -59,25 +59,37 @@ With the expanded dataset, I retrained the YOLOv8 model, improving its performan
 Figure 2. Test the Model
 
 ## Model Evaluation
-Box Loss: measures bounding box regression error.
+### Box Loss: measures bounding box regression error.
+
 ![image](https://github.com/user-attachments/assets/7227b173-b99d-4da0-9a5c-e78a72cc1081)
 
 Figure 3. Training vs Validation Box Loss
 
-mAP@0.5 (mean Average Precision): measures object detection accuracy at an IoU threshold of 0.5.
+### mAP@0.5 (mean Average Precision): measures object detection accuracy at an IoU threshold of 0.5.
+
+
 ![image](https://github.com/user-attachments/assets/20eb8a59-1f4f-42a2-991e-33dff4eecb84)
 
 Figure 4. Train vs  Validation mAP50
 
-# 🔗 Demo Web App: https://mufhua-hrjlzdbjbdv8jnvyndrrhr.streamlit.app/
+
+# 🔗 Demo Web App:
+https://mufhua-hrjlzdbjbdv8jnvyndrrhr.streamlit.app/
+
+![Screenshot 2025-05-04 153248](https://github.com/user-attachments/assets/ac3e4845-0799-4597-8441-c554a207009c)
+
+Figure 5. Web App Detection
 
 # Possible Improvements and Future Work
-Add More Classes
+## Add More Classes
+
 The model currently detects only two classes. Expanding to include other confusing objects (e.g., cupcakes, dogs of other breeds) could improve its real-world robustness.
 
-Improve Dataset Diversity
+## Improve Dataset Diversity
+
 Including more varied backgrounds, lighting conditions, and object orientations could help generalize the model further.
 
-Experiment with Other Architectures
+## Experiment with Other Architectures
+
 Trying other models like YOLO-World, DETR, or even fine-tuning Vision Transformers could be interesting for comparison.
 
