@@ -1,4 +1,6 @@
 streamlit
 Pillow
 ultralytics
-opencv-python-headless
+opencv-python-headless==4.8.0.74
+# explicitly prevent opencv-python from installing
+opencv-python==0.0.0
